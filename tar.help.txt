@@ -1,0 +1,18 @@
+*Refer: https://www.addictivetips.com/windows-tips/single-file-multiple-zip-files/
+
+This command will split a gzip compressed tar archive into 5MB chunks: 		
+tar cvzf - example-dir/ | split --bytes=10MB - myfiles.tar.gz.
+
+To open the split tar archive that we’ve created, you can use the cat command, piped to the tar command.
+cat myfiles.tar.gz.* | tar xzvf -
+
+
+
+
+
+#Change Here
+This command will split a gzip compressed tar archive into 5MB chunks: 		
+tar cvzf - data.zip | split --bytes=10MB - lab3.tar.gz.
+
+To open the split tar archive that we’ve created, you can use the cat command, piped to the tar command.
+cat lab2.tar.gz.* | tar xzvf -
